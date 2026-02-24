@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Novacore Systems</title>
+
+<style>
+body{
+font-family: Arial;
+background:#0f172a;
+color:white;
+text-align:center;
+padding-top:100px;
+}
+
+#loginBox{
+background:#111827;
+padding:30px;
+width:300px;
+margin:auto;
+border-radius:10px;
+}
+
+input{
+padding:10px;
+width:90%;
+margin-top:10px;
+border:none;
+border-radius:5px;
+}
+
+button{
+padding:10px 20px;
+margin-top:15px;
+background:#22c55e;
+border:none;
+color:white;
+border-radius:5px;
+cursor:pointer;
+}
+
+#dashboard{
+display:none;
+padding:30px;
+}
+</style>
+</head>
+
+<body>
+
+<div id="loginBox">
+<h2>Secure Access</h2>
+<input type="password" id="pass" placeholder="Enter Password">
+<br>
+<button onclick="check()">Login</button>
+<p id="wrong" style="color:red;"></p>
+</div>
+
+<div id="dashboard">
+<h1>Internal Panel</h1>
+<p>Private Storage Area</p>
+
+<textarea style="width:80%;height:150px;">
+Yaha tum apne notes likh sakte ho.
+</textarea>
+
+<br><br>
+
+<input type="text" placeholder="Important Link Save Karo">
+
+</div>
+
+<script>
+function check(){
+var p = document.getElementById("pass").value;
+
+if(p === "Sonu@123"){   // <-- PASSWORD YAHA CHANGE KARNA
+document.getElementById("loginBox").style.display="none";
+document.getElementById("dashboard").style.display="block";
+}
+else{
+document.getElementById("wrong").innerText="Access Denied";
+}
+}
+</script>
+
+</body>
+  </html>
